@@ -13,10 +13,10 @@ function creteImgCard(galleryItems) {
     return `
     <div class="gallery__item">
       <a class="gallery__item" href="${original}" onclick="event.preventDefault()">
-        <img class="gallery__image" src="${preview}" alt="Image description" title = "${description}" />
+        <img class="gallery__image" src="${preview}" alt="${description}" title = "${description}" />
       </a>
     </div>`;
   }).join('');
 };
 
-var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+var lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250, captionPosition: 'bottom',  });
